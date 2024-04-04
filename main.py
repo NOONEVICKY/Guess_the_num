@@ -9,8 +9,15 @@ def check_guess(guess, target, chance):
   """
     check game
   """
+    if guess < target:
+        messagebox.showinfo("Too Low", f"Too Low! Try again. You have {chance} more chances.")
+    elif guess > target:
+        messagebox.showinfo("Too High", f"Too High! Try again. You have {chance} more chances.")
+    else:
+        messagebox.showinfo("Correct", f"{guess} is the Correct Number! You completed within {chance} chances.")
+        return True  # Indicates that the correct number is guessed
+    return False
     
-
 def guess_from_entry():
   """
      guess_from_entry
