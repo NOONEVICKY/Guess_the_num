@@ -20,6 +20,9 @@ def play_game():
     """
     play game 
     """
+    global target_number
+    target_number = generate_number()
+    remaining_chances.set(max_attempts)
 
 root = tk.Tk()
 root.title("Number Guessing Game")
