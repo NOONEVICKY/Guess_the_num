@@ -15,6 +15,9 @@ def guess_from_entry():
   """
      guess_from_entry
   """
+    guess = int(entry_guess.get())
+    if check_guess(guess, target_number, remaining_chances.get()):
+        root.quit()  # Exit the application if the correct number is guessed
    
 def play_game():
     """
